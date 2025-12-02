@@ -42,6 +42,7 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
           working-directory: .
+          github-comment: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Comment PR with deployment info
