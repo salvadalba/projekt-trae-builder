@@ -35,10 +35,9 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
           working-directory: .
-          github-comment: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          prod: true
 
       - name: Comment PR with deployment info
         if: github.event_name == 'pull_request'
