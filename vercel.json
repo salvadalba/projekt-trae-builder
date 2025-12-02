@@ -52,12 +52,5 @@
       "source": "/api/contact",
       "destination": "${SUPABASE_FUNCTIONS_URL}/contact-submit"
     }
-  ],
-  "env": [
-    "SUPABASE_URL",
-    "SUPABASE_FUNCTIONS_URL",
-    "SUPABASE_ANON_KEY",
-    "SENTRY_DSN",
-    "DEPLOY_ENV"
   ]
 }
