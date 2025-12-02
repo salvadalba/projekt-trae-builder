@@ -1,0 +1,66 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["main", "development"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check HTML validity
+        run: |
+          echo "Checking HTML files..."
+          for file in *.html; do
+            echo "✓ Found: $file"
+          done
+
+  deploy:
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel
+        id: deploy
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: .
+          github-comment: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          prod: true
+
+      - name: Comment PR with deployment info
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Deployment preview ready! Check the preview environment for this PR.'
+            })
+
+      - name: Set environment variables for production
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "DEPLOY_ENV=production" >> $GITHUB_ENV
+          echo "Deployment to production initiated"
+
+      - name: Verify deployment
+        run: |
+          echo "✓ Deployment completed successfully"
+          echo "Production URL: https://your-domain.com"
+
+

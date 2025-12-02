@@ -1,0 +1,311 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - NODAYSIDLE</title>
+    <meta name="description" content="View my portfolio of web development projects showcasing various technologies and frameworks">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+      (function(){
+        try{
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', saved ? saved : (prefersDark ? 'dark':'light'));
+        }catch(e){ }
+      })();
+    </script>
+    <script src="https://browser.sentry-cdn.com/8.20.0/bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/web-vitals@3/dist/web-vitals.iife.js"></script>
+</head>
+<body>
+    <canvas id="particles" class="particles"></canvas>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">NDI</a>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link nav__link--active">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+            <button class="nav__toggle" aria-label="Toggle navigation menu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">My Projects</h1>
+                <p class="page-header__subtitle">
+                    A collection of web applications and tools I've built using modern technologies
+                </p>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn filter-btn--active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="api">APIs</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid-section">
+            <div class="container">
+                <div class="projects-grid">
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="E-commerce Platform" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>React 18 with Hooks</li>
+                                        <li>Node.js & Express</li>
+                                        <li>MongoDB with Mongoose</li>
+                                        <li>JWT Authentication</li>
+                                        <li>Stripe Payment Integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">E-commerce Platform</h3>
+                            <p class="project-card__description">
+                                A full-featured online marketplace with user authentication, shopping cart functionality, payment processing, and an admin dashboard for inventory management.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--react">React</span>
+                                <span class="tag tag--nodejs">Node.js</span>
+                                <span class="tag tag--mongodb">MongoDB</span>
+                                <span class="tag tag--stripe">Stripe</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="frontend">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="Task Management App" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>Vue.js 3 Composition API</li>
+                                        <li>Vuex for State Management</li>
+                                        <li>Firebase Real-time Database</li>
+                                        <li>Vue Router</li>
+                                        <li>Tailwind CSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Task Management App</h3>
+                            <p class="project-card__description">
+                                A collaborative productivity application featuring drag-and-drop task organization, real-time updates, team collaboration, and project timeline visualization.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--vue">Vue.js</span>
+                                <span class="tag tag--firebase">Firebase</span>
+                                <span class="tag tag--tailwind">Tailwind CSS</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="frontend">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="Weather Dashboard" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>Vanilla JavaScript ES6+</li>
+                                        <li>OpenWeatherMap API</li>
+                                        <li>Chart.js for Data Visualization</li>
+                                        <li>Geolocation API</li>
+                                        <li>Local Storage</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Weather Dashboard</h3>
+                            <p class="project-card__description">
+                                An interactive weather application providing location-based forecasts, historical data visualization, weather alerts, and customizable dashboard with multiple city tracking.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--javascript">JavaScript</span>
+                                <span class="tag tag--api">REST API</span>
+                                <span class="tag tag--chartjs">Chart.js</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="api">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="REST API Service" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>Node.js & Express</li>
+                                        <li>MongoDB Atlas</li>
+                                        <li>JWT Authentication</li>
+                                        <li>Redis Caching</li>
+                                        <li>Docker Containerization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">REST API Service</h3>
+                            <p class="project-card__description">
+                                A scalable RESTful API service with authentication, rate limiting, data validation, caching, and comprehensive documentation using Swagger.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--nodejs">Node.js</span>
+                                <span class="tag tag--mongodb">MongoDB</span>
+                                <span class="tag tag--redis">Redis</span>
+                                <span class="tag tag--docker">Docker</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">API Docs</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="mobile">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="Mobile Banking App" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>React Native</li>
+                                        <li>Expo SDK</li>
+                                        <li>Firebase Authentication</li>
+                                        <li>Redux for State Management</li>
+                                        <li>Native Base UI</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Mobile Banking App</h3>
+                            <p class="project-card__description">
+                                A secure mobile banking application with biometric authentication, transaction history, budget tracking, and real-time notifications for account activity.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--react">React Native</span>
+                                <span class="tag tag--firebase">Firebase</span>
+                                <span class="tag tag--redux">Redux</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">App Store</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="fullstack">
+                        <div class="project-card__image">
+                            <img src="images/placeholder-project.jpg" alt="Social Media Dashboard" loading="lazy">
+                            <div class="project-card__overlay">
+                                <div class="project-card__overlay-content">
+                                    <h4>Technologies Used:</h4>
+                                    <ul>
+                                        <li>Next.js 13</li>
+                                        <li>PostgreSQL</li>
+                                        <li>Prisma ORM</li>
+                                        <li>NextAuth.js</li>
+                                        <li>Tailwind CSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Social Media Dashboard</h3>
+                            <p class="project-card__description">
+                                A comprehensive social media analytics dashboard with multi-platform integration, performance metrics, content scheduling, and engagement tracking.
+                            </p>
+                            <div class="project-card__tags">
+                                <span class="tag tag--nextjs">Next.js</span>
+                                <span class="tag tag--postgresql">PostgreSQL</span>
+                                <span class="tag tag--prisma">Prisma</span>
+                                <span class="tag tag--tailwind">Tailwind CSS</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#" class="btn btn--small btn--primary">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">View Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">&copy; 2025 NODAYSIDLE. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/projects-filter.js"></script>
+</body>
+</html>

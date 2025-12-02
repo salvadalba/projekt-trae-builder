@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - NODAYSIDLE</title>
+    <meta name="description" content="Learn more about my background, skills, and experience as a web developer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>
+      (function(){
+        try{
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', saved ? saved : (prefersDark ? 'dark':'light'));
+        }catch(e){ }
+      })();
+    </script>
+    <script src="https://browser.sentry-cdn.com/8.20.0/bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/web-vitals@3/dist/web-vitals.iife.js"></script>
+</head>
+<body>
+    <canvas id="particles" class="particles"></canvas>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="index.html" class="nav__logo">NDI</a>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__item">
+                    <a href="index.html" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="projects.html" class="nav__link">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="about.html" class="nav__link nav__link--active">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="contact.html" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+            <button class="nav__toggle" aria-label="Toggle navigation menu">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">About Me</h1>
+                <p class="page-header__subtitle">
+                    Passionate about creating innovative web solutions and continuously learning new technologies
+                </p>
+            </div>
+        </section>
+
+        <section class="about-intro">
+            <div class="container">
+                <div class="about-intro__content">
+                    <div class="about-intro__image">
+                        <img src="images/placeholder-project.jpg" alt="NODAYSIDLE Profile Photo" loading="lazy">
+                    </div>
+                    <div class="about-intro__text">
+                        <h2>Hello, we are NDI</h2>
+                        <p>
+                            We are a passionate full-stack web developers with over 3 years of experience building modern, responsive web applications. My journey in web development started with a curiosity about how websites work, which evolved into a career focused on creating seamless user experiences and robust backend systems.
+                        </p>
+                        <p>
+                            I specialize in JavaScript technologies, particularly React and Node.js, but I'm always eager to learn and work with new frameworks and tools. I believe in writing clean, maintainable code and following best practices in software development.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge through technical writing and mentoring.
+                        </p>
+                        <div class="about-intro__actions">
+                            <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
+                            <a href="files/resume.html" class="btn btn--outline">View Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="container">
+                <h2 class="section__title">Technical Skills</h2>
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Frontend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">React.js</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Vue.js</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">TypeScript</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">HTML5 & CSS3</span>
+                                    <span class="skill-item__level">Expert</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Tailwind CSS</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Backend Development</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Node.js</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Express.js</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Python</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">REST APIs</span>
+                                    <span class="skill-item__level">Expert</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">GraphQL</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3 class="skill-category__title">Database & Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">MongoDB</span>
+                                    <span class="skill-item__level">Advanced</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">PostgreSQL</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Git & GitHub</span>
+                                    <span class="skill-item__level">Expert</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">Docker</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item__info">
+                                    <span class="skill-item__name">AWS</span>
+                                    <span class="skill-item__level">Intermediate</span>
+                                </div>
+                                <div class="skill-item__progress">
+                                    <div class="skill-item__progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <div class="container">
+                <h2 class="section__title">Experience & Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item__date">2022 - Present</div>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Senior Full-Stack Developer</h3>
+                            <h4 class="timeline-item__company">Tech Innovations Inc.</h4>
+                            <p class="timeline-item__description">
+                                Lead developer for multiple client projects, mentoring junior developers, and implementing best practices for code quality and deployment processes. Specialized in React and Node.js applications with a focus on performance optimization and user experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__date">2020 - 2022</div>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Full-Stack Developer</h3>
+                            <h4 class="timeline-item__company">Digital Solutions Agency</h4>
+                            <p class="timeline-item__description">
+                                Developed and maintained web applications for various clients across different industries. Worked with modern JavaScript frameworks, RESTful APIs, and cloud services. Collaborated with design teams to implement pixel-perfect responsive designs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__date">2019 - 2020</div>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Junior Web Developer</h3>
+                            <h4 class="timeline-item__company">StartUp Hub</h4>
+                            <p class="timeline-item__description">
+                                Started my professional journey building websites and web applications using HTML, CSS, JavaScript, and PHP. Gained experience with content management systems and e-commerce platforms while learning modern development practices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item__date">2015 - 2019</div>
+                        <div class="timeline-item__content">
+                            <h3 class="timeline-item__title">Bachelor of Science in Computer Science</h3>
+                            <h4 class="timeline-item__company">University of Technology</h4>
+                            <p class="timeline-item__description">
+                                Graduated with honors, focusing on software engineering, web development, and database systems. Participated in various coding competitions and hackathons, winning several awards for innovative web applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications-section">
+            <div class="container">
+                <h2 class="section__title">Certifications & Achievements</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="certification-card__icon">🏆</div>
+                        <h3 class="certification-card__title">AWS Certified Developer</h3>
+                        <p class="certification-card__issuer">Amazon Web Services</p>
+                        <p class="certification-card__date">2023</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-card__icon">🚀</div>
+                        <h3 class="certification-card__title">React Developer Certification</h3>
+                        <p class="certification-card__issuer">Meta</p>
+                        <p class="certification-card__date">2022</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-card__icon">🎖️</div>
+                        <h3 class="certification-card__title">MongoDB Certified Developer</h3>
+                        <p class="certification-card__issuer">MongoDB University</p>
+                        <p class="certification-card__date">2021</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="certification-card__icon">⭐</div>
+                        <h3 class="certification-card__title">JavaScript Algorithms & Data Structures</h3>
+                        <p class="certification-card__issuer">freeCodeCamp</p>
+                        <p class="certification-card__date">2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">&copy; 2025 NODAYSIDLE. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
